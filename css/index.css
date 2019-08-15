@@ -232,12 +232,12 @@ body{
     z-index: 2;
 }
 .heart2{
-    animation: heartbeat 0.3s infinite;
-    -webkit-animation: heartbeat 0.3s infinite;
+    animation: heartbeat 0.5s infinite;
+    -webkit-animation: heartbeat 0.5s infinite;
 }
 .heart3{
-    animation: heartbeat 0.1s infinite;
-    -webkit-animation: heartbeat 0.1s infinite;
+    animation: heartbeat 0.3s infinite;
+    -webkit-animation: heartbeat 0.3s infinite;
 }
 .heart:before, .heart:after {
     content: "";
