@@ -34,8 +34,8 @@
 
 
     </div>
-    <video  controls="controls"   autoplay loop   id="musicAudio" preload  ref="palyVideo"  class="video">
-        <source src="img/video.mp4" type='video/mp4; codecs="avc1.4D401E, mp4a.40.2"'>
+    <video  controls="controls"   autoplay loop   id="musicAudio" preload  ref="palyVideo"  class="video" style="display: none;">
+        <source src="img/video.mp4" type='video/mp4; codecs="avc1.4D401E, mp4a.40.2"' style="display: none;">
     </video>
 </div>
 
@@ -58,20 +58,18 @@
 
         mounted() {
             let self = this;
-            setInterval(function () {
-                self.$refs.palyVideo.click(self.palyVideo());
-            },3000)
 
+            // self.$refs.palyVideo.click(self.aa());
         },
         methods: {
             changetab:function (index,item) {
                 this.tabIndex = index;
                 this.heartbeatNum = item;
                 console.log(this.tabIndex)
-
-
+                var  musicAudio = document.getElementById("musicAudio");
+                musicAudio.play();
             },
-            palyVideo(){
+            aa(){
                 console.log(22222222)
                 var  musicAudio = document.getElementById("musicAudio");
                 musicAudio.play();
