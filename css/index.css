@@ -54,10 +54,66 @@ body{
     -webkit-animation: click6 1.5s linear infinite;
     animation: click6 1.5s linear infinite;
 }
+
+
+
 .ripple2 span:nth-child(1){
-    -webkit-animation: click6 2.2s linear infinite;
-    animation: click6 2.2s linear infinite;
+    -webkit-animation: click1 0.8s linear infinite;
+    animation: click1 0.8s linear infinite;
 }
+.ripple2 span:nth-child(2){
+    -webkit-animation: click2 0.9s linear infinite;
+    animation: click2 0.9s linear infinite;
+}
+.ripple2 span:nth-child(3){
+    -webkit-animation: click3 1s linear infinite;
+    animation: click3 1s linear infinite;
+}
+.ripple2 span:nth-child(4){
+    -webkit-animation: click4 1.1s linear infinite;
+    animation: click4 1.1s linear infinite;
+}
+.ripple2 span:nth-child(5){
+    -webkit-animation: click5 1.2s linear infinite;
+    animation: click5 1.2s linear infinite;
+}
+.ripple2 span:nth-child(6){
+    -webkit-animation: click6 1.3s linear infinite;
+    animation: click6 1.3s linear infinite;
+}
+
+
+
+
+
+.ripple3 span:nth-child(1){
+    -webkit-animation: click1 0.5s linear infinite;
+    animation: click1 0.5s linear infinite;
+}
+.ripple3 span:nth-child(2){
+    -webkit-animation: click2 0.6s linear infinite;
+    animation: click2 0.6s linear infinite;
+}
+.ripple3 span:nth-child(3){
+    -webkit-animation: click3 0.7s linear infinite;
+    animation: click3 0.7s linear infinite;
+}
+.ripple3 span:nth-child(4){
+    -webkit-animation: click4 0.8s linear infinite;
+    animation: click4 0.8s linear infinite;
+}
+.ripple3 span:nth-child(5){
+    -webkit-animation: click5 0.9s linear infinite;
+    animation: click5 0.9s linear infinite;
+}
+.ripple3 span:nth-child(6){
+    -webkit-animation: click6 1s linear infinite;
+    animation: click6 1s linear infinite;
+}
+
+
+
+
 @-webkit-keyframes click1{
     0% {
         opacity: .8;
