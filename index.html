@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>心脏节拍器</title>
+    <link rel="stylesheet" href="css/index.css">
+    <script type="text/javascript" src="js/rem.js"></script>
+</head>
+<body>
+
+<div class="container" id="app">
+    <!--   波纹-->
+    <div class="ripple" :class="tabIndex ==1? 'ripple2':(tabIndex == 2? 'ripple3':'')" >
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <!--  心脏  -->
+    <div class="heart" :class="tabIndex ==1? 'heart2':(tabIndex == 2? 'heart3':'')" ></div>
+    <!--   心脏跳动数字-->
+    <div class="frequency">{{heartbeatNum}}次/分</div>
+    <div class="foot">
+        <div class="foot-count">
+            <div class="foot-list" @click="changetab(index,item)"  v-for="(item,index) in tabList" :key="index" :class="index == tabIndex?'seelct':''">
+                <span class="foot-item">{{item}}</span>
+                <span class="foot-circular"></span>
+            </div>
+        </div>
+        <div class="foot-line"></div>
+
+
+    </div>
+
+</div>
+
+
+</body>
+<script type="text/javascript" src="js/vue.min.js"></script>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            //数据类型
+            tabIndex:0,
+            tabList:['100','110','120'],
+            heartbeatNum:'100'
+
+        },
+
+        mounted() {
+
+        },
+        methods: {
+            changetab:function (index,item) {
+                this.tabIndex = index;
+                this.heartbeatNum = item;
+                console.log(this.tabIndex)
+            },
+
+        },
+        created: function () {
+
+        },
+
+    });
+
+</script>
+</html>
