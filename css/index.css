@@ -403,8 +403,8 @@ body{
 
 }
 .video{
-    position: fixed;
-    width: 0;
-    height: 0;
+    position: revert;
+    width: 0!important;
+    height: 0 !important;
     z-index: -99;
 }

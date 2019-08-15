@@ -57,7 +57,10 @@
         },
 
         mounted() {
-
+           /* setInterval(function () {
+                var  musicAudio = document.getElementById("musicAudio");
+                musicAudio.play();
+            },1000)*/
         },
         methods: {
             changetab:function (index,item) {
@@ -65,8 +68,7 @@
                 this.heartbeatNum = item;
                 console.log(this.tabIndex)
 
-                var  musicAudio = document.getElementById("musicAudio");
-                musicAudio.play();
+
             },
 
         },
