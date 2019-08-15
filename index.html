@@ -57,10 +57,11 @@
         },
 
         mounted() {
-           /* setInterval(function () {
-                var  musicAudio = document.getElementById("musicAudio");
-                musicAudio.play();
-            },1000)*/
+            let self = this;
+            setInterval(function () {
+                self.$refs.palyVideo.click(self.palyVideo());
+            },3000)
+
         },
         methods: {
             changetab:function (index,item) {
@@ -70,6 +71,11 @@
 
 
             },
+            palyVideo(){
+                console.log(22222222)
+                var  musicAudio = document.getElementById("musicAudio");
+                musicAudio.play();
+            }
 
         },
         created: function () {
