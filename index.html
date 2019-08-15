@@ -23,12 +23,6 @@
     <div class="heart" :class="tabIndex ==1? 'heart2':(tabIndex == 2? 'heart3':'')" ></div>
     <!--   心脏跳动数字-->
     <div class="frequency">{{heartbeatNum}}次/分</div>
-
-    <video  controls="controls"   autoplay loop style="display: none;">
-        <source src="img/video.mp4" type='video/mp4; codecs="avc1.4D401E, mp4a.40.2"'>
-    </video>
-    poster="movie.jpg"为视频首页显示图片
-
     <div class="foot">
         <div class="foot-count">
             <div class="foot-list" @click="changetab(index,item)"  v-for="(item,index) in tabList" :key="index" :class="index == tabIndex?'seelct':''">
@@ -40,12 +34,16 @@
 
 
     </div>
-
+    <video  controls="controls"   autoplay loop   id="musicAudio" preload  ref="palyVideo"  class="video">
+        <source src="img/video.mp4" type='video/mp4; codecs="avc1.4D401E, mp4a.40.2"'>
+    </video>
 </div>
 
 
 </body>
+<script type="text/javascript" src="js/jquery.min.js"></script>
 <script type="text/javascript" src="js/vue.min.js"></script>
+<script type="text/javascript" src="js/video.min.js"></script>
 
 <script>
     new Vue({
@@ -66,6 +64,9 @@
                 this.tabIndex = index;
                 this.heartbeatNum = item;
                 console.log(this.tabIndex)
+
+                var  musicAudio = document.getElementById("musicAudio");
+                musicAudio.play();
             },
 
         },

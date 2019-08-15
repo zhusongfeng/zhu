@@ -402,3 +402,9 @@ body{
     background-color: rgb(255, 220, 1);
 
 }
+.video{
+    position: fixed;
+    width: 0;
+    height: 0;
+    z-index: -99;
+}
