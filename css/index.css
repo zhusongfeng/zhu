@@ -408,3 +408,6 @@ body{
     height: 0 !important;
     z-index: -99;
 }
+video::-webkit-media-controls{
+    display:none !important;
+}
