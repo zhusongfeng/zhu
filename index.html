@@ -60,7 +60,6 @@
 
         mounted() {
             let self = this;
-
             self.$refs.palyVideo.click(self.playMusic());
         },
         methods: {
@@ -74,11 +73,18 @@
                 }else {
                     this.musci = 'img/c.mp3';
                 }
+                this.$nextTick(function () {
+                    var  musicAudio = document.getElementById("musicAudio");
+                    musicAudio.play();
 
+                })
             },
             playMusic(){
+              
                 if(this.musci){
+
                     this.$nextTick(function () {
+
                         var  musicAudio = document.getElementById("musicAudio");
                         musicAudio.play();
 
