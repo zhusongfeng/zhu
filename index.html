@@ -11,7 +11,7 @@
 
 
 <div class="container" id="app" ref="palyVideo">
-    <div class="top-play" @click="playMusic" v-if="showPlayMusic">
+    <div class="top-play" @click="play" v-if="showPlayMusic">
         <div class="play"></div>
         <div class="play"></div>
     </div>
@@ -89,20 +89,25 @@
             },
             playMusic(){
 
-                if(this.musci){
-
-                    this.$nextTick(function () {
+                let self = this;
+                self.showPlayMusic = !self.showPlayMusic;
+                if(self.musci){
+                    self.$nextTick(function () {
                         var  musicAudio = document.getElementById("musicAudio");
                         musicAudio.load(); //重新加载src指定的资源
-                        this.showPlayMusic = true;
-                        //Media.play(); //播放
-                        // musicAudio.pause(); //暂停
                         musicAudio.play();
                     })
                 }
             },
+            play(){
+                console.log(222222,this.showPlayMusic);
+                this.showPlayMusic = !this.showPlayMusic;
+                var  musicAudio = document.getElementById("musicAudio");
+                musicAudio.load(); //重新加载src指定的资源
+                musicAudio.play();
+            },
             suspend(){
-                this.showPlayMusic = false;
+                this.showPlayMusic = !this.showPlayMusic;
                 var  musicAudio = document.getElementById("musicAudio");
                 musicAudio.load(); //重新加载src指定的资源
                 //Media.play(); //播放
