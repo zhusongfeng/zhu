@@ -88,12 +88,13 @@
                 })
             },
             playMusic(){
-                this.showPlayMusic = !this.showPlayMusic;
+
                 if(this.musci){
 
                     this.$nextTick(function () {
                         var  musicAudio = document.getElementById("musicAudio");
                         musicAudio.load(); //重新加载src指定的资源
+                        this.showPlayMusic = true;
                         //Media.play(); //播放
                         // musicAudio.pause(); //暂停
                         musicAudio.play();
@@ -101,7 +102,7 @@
                 }
             },
             suspend(){
-                this.showPlayMusic = !this.showPlayMusic;
+                this.showPlayMusic = false;
                 var  musicAudio = document.getElementById("musicAudio");
                 musicAudio.load(); //重新加载src指定的资源
                 //Media.play(); //播放
