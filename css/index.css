@@ -35,24 +35,24 @@ body{
     animation: click1 1s linear infinite;
 }
 .ripple span:nth-child(2){
-    -webkit-animation: click2 1.1s linear infinite;
-    animation: click2 1.1s linear infinite;
+    -webkit-animation: click2 1.3s linear infinite;
+    animation: click2 1.3s linear infinite;
 }
 .ripple span:nth-child(3){
-    -webkit-animation: click3 1.2s linear infinite;
-    animation: click3 1.2s linear infinite;
+    -webkit-animation: click3 1.5s linear infinite;
+    animation: click3 1.5s linear infinite;
 }
 .ripple span:nth-child(4){
-    -webkit-animation: click4 1.3s linear infinite;
-    animation: click4 1.3s linear infinite;
+    -webkit-animation: click4 1.5s linear infinite;
+    animation: click4 1.5s linear infinite;
 }
 .ripple span:nth-child(5){
-    -webkit-animation: click5 1.4s linear infinite;
-    animation: click5 1.4s linear infinite;
+    -webkit-animation: click5 1.3s linear infinite;
+    animation: click5 1.3s linear infinite;
 }
 .ripple span:nth-child(6){
-    -webkit-animation: click6 1.5s linear infinite;
-    animation: click6 1.5s linear infinite;
+    -webkit-animation: click6 1s linear infinite;
+    animation: click6 1s linear infinite;
 }
 
 
@@ -147,8 +147,8 @@ body{
     }
     100% {
         opacity: 0;
-        -webkit-transform: scale(2.5);
-        transform: scale(2.5);
+        -webkit-transform: scale(3);
+        transform: scale(3);
     }
 }
 
@@ -160,8 +160,8 @@ body{
     }
     100% {
         opacity: 0;
-        -webkit-transform: scale(2.5);
-        transform: scale(2.5);
+        -webkit-transform: scale(3);
+        transform: scale(3);
     }
 }
 @-webkit-keyframes click3{
@@ -172,8 +172,8 @@ body{
     }
     100% {
         opacity: 0;
-        -webkit-transform: scale(2.7);
-        transform: scale(2.7);
+        -webkit-transform: scale(4);
+        transform: scale(4);
     }
 }
 
@@ -185,8 +185,8 @@ body{
     }
     100% {
         opacity: 0;
-        -webkit-transform: scale(2.7);
-        transform: scale(2.7);
+        -webkit-transform: scale(4);
+        transform: scale(4);
     }
 }
 @-webkit-keyframes click4{
@@ -197,8 +197,8 @@ body{
     }
     100% {
         opacity: 0;
-        -webkit-transform: scale(2.9);
-        transform: scale(2.9);
+        -webkit-transform: scale(3);
+        transform: scale(3);
     }
 }
 
@@ -210,8 +210,8 @@ body{
     }
     100% {
         opacity: 0;
-        -webkit-transform: scale(2.9);
-        transform: scale(2.9);
+        -webkit-transform: scale(3);
+        transform: scale(3);
     }
 }
 @-webkit-keyframes click5{
@@ -222,8 +222,8 @@ body{
     }
     100% {
         opacity: 0;
-        -webkit-transform: scale(3.1);
-        transform: scale(3.1);
+        -webkit-transform: scale(2);
+        transform: scale(2);
     }
 }
 
@@ -235,8 +235,8 @@ body{
     }
     100% {
         opacity: 0;
-        -webkit-transform: scale(3.1);
-        transform: scale(3.1);
+        -webkit-transform: scale(2);
+        transform: scale(2);
     }
 }
 @-webkit-keyframes click6{
