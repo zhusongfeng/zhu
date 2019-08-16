@@ -88,7 +88,6 @@
                 })
             },
             playMusic(){
-
                 let self = this;
                 self.showPlayMusic = true;
                 if(self.musci){
@@ -102,7 +101,7 @@
 
             play(){
                 console.log(222222,this.showPlayMusic);
-                this.showPlayMusic = false ;
+                this.showPlayMusic = false;
                 var  musicAudio = document.getElementById("musicAudio");
                 musicAudio.load(); //重新加载src指定的资源
                 musicAudio.pause();
