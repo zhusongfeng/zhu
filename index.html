@@ -9,7 +9,15 @@
 </head>
 <body>
 
+
 <div class="container" id="app" ref="palyVideo">
+    <div class="top-play" @click="playMusic" v-if="showPlayMusic">
+        <div class="play"></div>
+        <div class="play"></div>
+    </div>
+    <div class="top-play" @click="suspend" v-if="!showPlayMusic">
+        <div class="no-play"></div>
+    </div>
     <!--   波纹-->
     <div class="ripple" :class="tabIndex ==1? 'ripple2':(tabIndex == 2? 'ripple3':'')" >
         <span></span>
@@ -34,10 +42,8 @@
 
 
     </div>
-    <audio :src="musci" id="musicAudio" autoplay loop preload   ></audio>
-   <!-- <video   autoplay loop   id="musicAudio" preload  ref="palyVideo"  class="video" style="display: none;">
-        <source src="img/video.mp4" type='video/mp4;' style="width: 0;height: 0; display: none;" class="play">
-    </video>-->
+    <video :src="musci" id="musicAudio" autoplay loop preload ></video>
+
 </div>
 
 
@@ -54,13 +60,15 @@
             tabIndex:0,
             tabList:['100','110','120'],
             heartbeatNum:'100',
-            musci:'img/a.mp3'
+            musci:'img/a.mp3',
+            showPlayMusic:false
 
         },
 
         mounted() {
             let self = this;
             self.$refs.palyVideo.click(self.playMusic());
+
         },
         methods: {
             changetab:function (index,item) {
@@ -80,23 +88,28 @@
                 })
             },
             playMusic(){
-              
+                this.showPlayMusic = !this.showPlayMusic;
                 if(this.musci){
 
                     this.$nextTick(function () {
-
                         var  musicAudio = document.getElementById("musicAudio");
+                        musicAudio.load(); //重新加载src指定的资源
+                        //Media.play(); //播放
+                        // musicAudio.pause(); //暂停
                         musicAudio.play();
-
                     })
                 }
-
+            },
+            suspend(){
+                this.showPlayMusic = !this.showPlayMusic;
+                var  musicAudio = document.getElementById("musicAudio");
+                musicAudio.load(); //重新加载src指定的资源
+                //Media.play(); //播放
+                musicAudio.pause(); //暂停
             }
-
-
         },
         created: function () {
-
+            
         },
 
     });
