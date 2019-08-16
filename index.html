@@ -90,7 +90,7 @@
             playMusic(){
 
                 let self = this;
-                self.showPlayMusic = !self.showPlayMusic;
+                self.showPlayMusic = true;
                 if(self.musci){
                     self.$nextTick(function () {
                         var  musicAudio = document.getElementById("musicAudio");
@@ -99,19 +99,20 @@
                     })
                 }
             },
+
             play(){
                 console.log(222222,this.showPlayMusic);
-                this.showPlayMusic = !this.showPlayMusic;
+                this.showPlayMusic = false ;
                 var  musicAudio = document.getElementById("musicAudio");
                 musicAudio.load(); //重新加载src指定的资源
-                musicAudio.play();
+                musicAudio.pause();
             },
             suspend(){
-                this.showPlayMusic = !this.showPlayMusic;
+                this.showPlayMusic = true;
                 var  musicAudio = document.getElementById("musicAudio");
                 musicAudio.load(); //重新加载src指定的资源
                 //Media.play(); //播放
-                musicAudio.pause(); //暂停
+                musicAudio.play(); //暂停
             }
         },
         created: function () {
