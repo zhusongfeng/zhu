@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<div class="container" id="app">
+<div class="container" id="app" ref="palyVideo">
     <!--   波纹-->
     <div class="ripple" :class="tabIndex ==1? 'ripple2':(tabIndex == 2? 'ripple3':'')" >
         <span></span>
@@ -34,6 +34,7 @@
 
 
     </div>
+    <audio :src="musci" id="musicAudio" autoplay loop preload   ></audio>
    <!-- <video   autoplay loop   id="musicAudio" preload  ref="palyVideo"  class="video" style="display: none;">
         <source src="img/video.mp4" type='video/mp4;' style="width: 0;height: 0; display: none;" class="play">
     </video>-->
@@ -52,26 +53,39 @@
             //数据类型
             tabIndex:0,
             tabList:['100','110','120'],
-            heartbeatNum:'100'
+            heartbeatNum:'100',
+            musci:'img/a.mp3'
 
         },
 
         mounted() {
             let self = this;
 
-            // self.$refs.palyVideo.click(self.aa());
+            self.$refs.palyVideo.click(self.playMusic());
         },
         methods: {
             changetab:function (index,item) {
                 this.tabIndex = index;
                 this.heartbeatNum = item;
-              /*  console.log(this.tabIndex)
-                var  musicAudio = document.getElementById("musicAudio");
-                musicAudio.play();
-                $('#musicAudio').hide();
-                $('.play').hide();
-                musicAudio.controls = false;*/
+                if(index == 0){
+                    this.musci = 'img/a.mp3';
+                }else if(index == 1){
+                    this.musci = 'img/b.mp3';
+                }else {
+                    this.musci = 'img/c.mp3';
+                }
+
             },
+            playMusic(){
+                if(this.musci){
+                    this.$nextTick(function () {
+                        var  musicAudio = document.getElementById("musicAudio");
+                        musicAudio.play();
+
+                    })
+                }
+
+            }
 
 
         },
