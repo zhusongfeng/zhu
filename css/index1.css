@@ -22,8 +22,8 @@ body{
     animation: border 2s linear infinite;
 }
 .water .point2{
-    animation-delay:0.5s;
-    -webkit-animation-delay: 0.5s;
+    animation-delay:1s;
+    -webkit-animation-delay: 1s;
 }
 .water .point3{
     animation-delay:1.5s;
