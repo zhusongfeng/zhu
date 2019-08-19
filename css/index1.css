@@ -22,10 +22,10 @@ body{
     animation: border 4s linear infinite;
 }
 .water .ripple1{
-    animation: border 3s linear infinite;
+    animation: border 2s linear infinite;
 }
 .water .ripple11{
-    animation: border 2s linear infinite;
+    animation: border 1s linear infinite;
 }
 .water .point2{
     animation-delay:2s;
