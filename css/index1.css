@@ -22,24 +22,24 @@ body{
     animation: border 2s linear infinite;
 }
 .water .point2{
-    animation-delay:1s;
-    -webkit-animation-delay: 1s;
-}
-.water .point3{
-    animation-delay:1.5s;
-    -webkit-animation-delay: 1.5s;
-}
-.water .point4{
     animation-delay:2s;
     -webkit-animation-delay: 2s;
 }
-.water .point5{
-    animation-delay:2.5s;
-    -webkit-animation-delay: 2.5s;
-}
-.water .point6{
+.water .point3{
     animation-delay:3s;
     -webkit-animation-delay: 3s;
+}
+.water .point4{
+    animation-delay:4s;
+    -webkit-animation-delay: 4s;
+}
+.water .point5{
+    animation-delay:5s;
+    -webkit-animation-delay: 5s;
+}
+.water .point6{
+    animation-delay:6s;
+    -webkit-animation-delay: 6s;
 }
 
 
