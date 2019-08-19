@@ -22,20 +22,29 @@ body{
     animation: border 2s linear infinite;
 }
 .water .point2{
-    -webkit-animation-delay: 1s;
+    animation-delay:0.5s;
+    -webkit-animation-delay: 0.5s;
 }
 .water .point3{
+    animation-delay:1.5s;
     -webkit-animation-delay: 1.5s;
 }
 .water .point4{
+    animation-delay:2s;
     -webkit-animation-delay: 2s;
 }
 .water .point5{
+    animation-delay:2.5s;
     -webkit-animation-delay: 2.5s;
 }
 .water .point6{
+    animation-delay:3s;
     -webkit-animation-delay: 3s;
 }
+
+
+
+
 
 .water .ripple2{
     -webkit-animation-delay: 0.8s;
