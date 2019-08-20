@@ -19,13 +19,19 @@ body{
 .water .point,.water .ripple1,.water .ripple11{
     position: absolute;
     border-radius: 50%;
-    animation: border 4s linear infinite;
+    animation: border 2s linear infinite;
+    -o-animation: border 2s linear infinite;
+    -webkit-animation: border 2s linear infinite;
 }
 .water .ripple1{
     animation: border 2s linear infinite;
+    -webkit-animation: border 2s linear infinite;
+    -o-animation: border 2s linear infinite;
 }
 .water .ripple11{
     animation: border 1s linear infinite;
+    -webkit-animation: border 1s linear infinite;
+    -o-animation: border 1s linear infinite;
 }
 .water .point2{
     animation-delay:2s;
